@@ -58,10 +58,15 @@ File Structure:
 
 Put the image/s you want to evaluate into the sample/inputs folder.
 
-Run the following command:
+Run the following command (GPU inference):
 ```
-python face_test.py
+python test.py --checkpoint .\weights\face_paint_512_v2.pt --input_dir .\samples\inputs
 ```
+Run the following command (CPU inference):
+```
+python test.py --checkpoint .\weights\face_paint_512_v2.pt --input_dir .\samples\inputs --device cpu
+```
+
 And you will find the results under `sample/results`
 
 ### Inference on a video
